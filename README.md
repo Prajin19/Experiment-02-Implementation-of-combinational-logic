@@ -1,4 +1,6 @@
-# Experiment  02:Implementation of combinational logic
+# Name: Prajin S
+# Register Number: 23012918
+# Experiment 02:Implementation of combinational logic
  
 # AIM:
 To implement the given logic function verify its operation in Quartus using Verilog programming.
