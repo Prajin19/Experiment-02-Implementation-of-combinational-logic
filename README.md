@@ -1,17 +1,19 @@
-# Experiment--02-Implementation-of-combinational-logic
-Implementation of combinational logic gates
+# Experiment  02:Implementation of combinational logic
  
-## AIM:
+# AIM:
 To implement the given logic function verify its operation in Quartus using Verilog programming.
  F1= A’B’C’D’+AC’D’+B’CD’+A’BCD+BC’D
 F2=xy’z+x’y’z+w’xy+wx’y+wxy
- 
- 
- Theory :-
+
+# Equipments Required:
+Hardware – PCs, Cyclone II , USB flasher
+Software – Quartus prime
+
+# Theory:
 
 A combinational circuit is a circuit in which the output depends on the present combination of inputs. Combinational circuits are made up of logic gates. The output of each logic gate is determined by its logic function. Combinational circuits can be made using various logic gates, such as AND gates, OR gates, and NOT gates.
 
-@ Procedure :-
+# Procedure :
 
 1. Create a New Project:
 
@@ -46,28 +48,32 @@ them in the Messages window.
 > Click on Nade Finder > Click On "List" > Select All.
 
 *Give the Input Combinations according to the Truth Table and then simulate the Output
-
 Waveform.
-## Equipments Required:
-## Hardware – PCs, Cyclone II , USB flasher
-## Software – Quartus prime
 
-
-## Theory
+# Program:
+```
+module Experiment2(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+wire x1,x2,x3,x4,x5;
+assign x1=(~a)&(~b)&(~c)&(~d);
+assign x2=(a)&(~c)&(~d);
+assign x3=(~b)&(c)&(~d);
+assign x4=(~a)&(b)&(c)&(d);
+assign x5=(b)&(~c)&(d);
+assign f1=x1|x2|x3|x4|x5;
+endmodule
+```
  
+# RTL realization:
+![Exp2](https://github.com/Prajin19/Experiment-02-Implementation-of-combinational-logic/assets/144979377/f7bc9ed2-15d2-46b6-b6bd-9bb36ea9381e)
 
-## Logic Diagram
-## Procedure
-## Program:
-/*
-Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-## RTL realization
+# Truth Table:
+![Exp2_1](https://github.com/Prajin19/Experiment-02-Implementation-of-combinational-logic/assets/144979377/196d2f96-865a-41b4-b403-bc3e03c6ffd5)
 
-## Output:
-## RTL
-## Timing Diagram
+# Timing Diagram:
+![Exp2_Waveforms](https://github.com/Prajin19/Experiment-02-Implementation-of-combinational-logic/assets/144979377/fe884d76-4f67-461d-91c8-062f8a40b7b5)
+
+
 ## Result:
 Thus the given logic functions are implemented using  and their operations are verified using Verilog programming.
